@@ -1,0 +1,9 @@
+<% include partials/header %>
+
+	Faculty List
+	<% faculty.forEach(function(facultys){ %>
+		<li><%= facultys.name %> <strong>Department <%= facultys.department %>
+		</strong></li>
+	<% }); %>
+	<a href="faculty/newFaculty" class="btn btn-large btn-primary">Add new Faculty</a>
+<% include partials/footer %>

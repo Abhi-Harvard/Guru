@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="container">
+	<div class="row"> 	
+		<h1 style="text-align: center">Create a new faculty</h1>
+		<div style="margin: 25px auto; width: 30%">
+			<form action="/faculty" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="Enter ur name">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="department" placeholder="Enter ur department">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-block btn-primary btn-large">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<% include partials/footer %>
