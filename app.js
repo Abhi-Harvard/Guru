@@ -21,6 +21,29 @@ var facultyRegSchema = new mongoose.Schema({
 
 var Faculty = mongoose.model("Faculty", facultyRegSchema);	
 
+//	Student Schema
+var studentSchema = new mongoose.Schema({
+	name: String,
+	rollNo: Number,
+	attendance: Number
+});
+
+var Student = mongoose.model("Student", studentSchema);
+
+Student.create({
+	name: "Abhishek",
+	rollNo: 601,
+	attendance: 1
+}, function(err, Student){
+	if(err){
+		console.log(err);
+	} 
+	else{
+		console.log("Newly Created Student");
+		console.log(Student);
+	}
+});
+
 // routing 
 //	INDEX PAGE
 app.get('/landing',function(req,res,next){

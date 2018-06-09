@@ -1,4 +1,4 @@
-/*Toggle Switch*/
+/*Toggle Switch1*/
 .switch {
   position: relative;
   display: inline-block;
@@ -8,7 +8,7 @@
 
 .switch input {display:none;}
 
-.slider1 {
+.slider{
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -20,7 +20,7 @@
   transition: .4s;
 }
 
-.slider1:before {
+.slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -32,27 +32,61 @@
   transition: .4s;
 }
 
-input:checked + .slider1 {
+input:checked + .slider {
   background-color: #4CAF50;
 }
 
-input:focus + .slider1 {
+input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider1:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-/* Rounded slider1s*/
-.slider1.round {
+/* Rounded sliders*/
+.slider.round {
   border-radius: 34px;
 }
 
-.slider1.round:before {
+.slider.round:before {
   border-radius: 50%;
+}
+
+/*ToggleSwitch2*/
+.slider1{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #606060;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider1:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 20px;
+  bottom: 8px;
+  background-color: floralwhite;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider1 {
+  background-color: aqua;
+}
+
+/* Rounded sliders*/
+.slider1.round {
+  border-radius: 34px;
 }
 
 /*Toggle Buttons*/

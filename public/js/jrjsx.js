@@ -1,22 +1,13 @@
+/*SingleButtonToggle*/
 function btntoggle(stat){
-           if(stat.className == "button on") {
-              stat.className="button off";
-           } else {
-              stat.className="button on";
-           }
-        }
-/*function btx(btn){
-    var x = document.getElementById(btn);
-    if(x.clicked == true){
-        x.style.backgroundColor = "#f44336"
-        x.clicked = false
+    if(stat.className == "button on") {
+        stat.className="button off";
+    } else {
+        stat.className="button on";
     }
-    else{
-        x.style.backgroundColor = "#4CAF50"
-        x.clicked = true
-    }
-}*/
+}
 
+/*UniversalAttendanceSwitch*/
 function stoggle(stat){
     var cx = document.getElementById(stat);
     var c = document.getElementsByClassName('button');
@@ -29,4 +20,27 @@ function stoggle(stat){
         for(i=0;i<c.length;i++)
             c[i].className="button off"
     }
+}
+
+/*UniversalDisableSwitch*/
+/*function udstoggle(stat){
+    //var bx = document.getElementById(stat);
+    //var cx = document.getElementById('chswitch1');
+    var c = document.getElementsByClassName('button');
+    var i;
+    //if(bx.checked == true){
+        if(stat.className == "chbx1"){
+            for(i=0;i<c.length;i++)
+                c[i].className="button disable"
+
+        }
+    //}
+    else {
+        for(i=0;i<c.length;i++)
+            c[i].className="button off"
+    }
+}*/
+
+function udstoggle(stat){
+    
 }

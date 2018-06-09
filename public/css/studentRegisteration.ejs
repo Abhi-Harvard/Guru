@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+  <link rel="stylesheet" href="angular.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  
+  
+
+</head>
+
+<body>
+
+  <body ng-controller="RegisterCtrl" ng-app="myApp">
+
+   <div class="container">
+     <div id="signup">
+      <div class="signup-screen">
+       <div class="space-bot text-center">
+        <h1>Student Registration Form</h1>
+        <div class="divider"></div>
+      </div>
+      <form class="form-register" method="post" name="register" action="/addname" novalidate>
+        <div class="input-field col s6">
+          <input id="firstname" type="text" class="validate" name="firstname" required>
+          <label for="firstname">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="lastname" type="text" class="validate" name="lastname" required>
+          <label for="lastname">Last Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" type="email" name="email" ng-model="email" class="validate" required>
+          <label for="email">Email</label>
+          <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
+        </div>
+        <div class="input-field col s6">
+          <input id="mobile" type="number" class="validate" name="mobile" required>
+          <label for="mobile">Mobile-no</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="studid" type="number" class="validate" name="studid" required>
+          <label for="studid">Student-ID</label>
+        </div>
+        <div class="input-field col s6">
+
+         <input id="year" type="button" class="validate"  value="Select Year"><br>
+
+         <input id="y1" type="radio" class="validate" name="year" value="FE">
+         <label for="y1">FE</label>
+
+         <input id="y2" type="radio" class="validate" name="year" value="SE">
+         <label for="y2">SE</label>
+
+         <input id="y3" type="radio" class="validate" name="year" value="TE">
+         <label for="y3">TE</label>
+
+         <input id="y4" type="radio" class="validate" name="year" value="BE">
+         <label for="y4">BE</label>
+         <script>
+          alert($('input[name=year:checked]').val());
+        </script>
+      </div>
+
+      <div class="input-field col s6">
+       <input id="branch" type="button" class="validate" value="Select Branch"><br>
+       <input id="b1" type="radio" class="validate" name="branch" value="IT">
+       <label for="b1">IT</label>
+
+       <input id="b2" type="radio" class="validate" name="branch" value="Mechanical">
+       <label for="b2">Mechanical</label>
+       <input id="b3" type="radio" class="validate" name="branch" value="Computers">
+       <label for="b3">Computers</label>
+       <input id="b4" type="radio" class="validate" name="branch" value="Electronics">
+       <label for="b4">Electronics</label>
+       <input id="b5" type="radio" class="validate" name="branch" value="Instrumentation">
+       <label for="b5">Instrumentation</label>
+       <script>
+        alert($('input[name=branch:checked]').val());
+      </script>
+    </div>
+
+
+    <div class="input-field col s6">
+     <input id="password" type="password" name="password" ng-model="password" ng-minlength='6' class="validate" required>
+     <label for="password">Create a Password</label>
+   </div>
+   <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
+   <div class="space-top text-center">
+     <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done">
+       <i class="material-icons left">done</i> Done
+     </button>
+     <button type="button" class="waves-effect waves-light btn cancel">
+       <i class="material-icons left">clear</i>Cancel
+     </button>
+   </div>
+ </form>
+
+</div>
+</div>
+</div>
+</body>
+<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
+
+<script  src="angular.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
